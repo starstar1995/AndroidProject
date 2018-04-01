@@ -1,38 +1,17 @@
 package com.example.asus.footprint;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Fragment;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
-/**
- *
- */
-
-public class ProcessActivity extends AppCompatActivity {
+public class ProcessActivity extends Fragment {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.process_layout);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+        return inflater.inflate(R.layout.process_layout, container, false);
     }
 
-    public void btnProcess(View view){
-
-    }
-
-    public void btnGoToActivity(View view){
-        Intent intent = new Intent(ProcessActivity.this, ActivityActivity.class);
-        startActivity(intent);
-    }
-
-    public void imgButtonClick_plan(View view){
-        Intent intent = new Intent(ProcessActivity.this, PlanActivity.class);
-        startActivity(intent);
-    }
-
-    public void imgButtonClick_profile(View view){
-        Intent intent = new Intent(ProcessActivity.this, ProfileActivity.class);
-        startActivity(intent);
-    }
 }

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3E5FC">
+
+        <LinearLayout
+            android:id="@+id/TabBtnProcess"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:descendantFocusability="beforeDescendants"
+            android:layout_height="match_parent">
+
+
+            <ImageButton
+                android:id="@+id/imgProcess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:src="@drawable/icons_process"/>
+
+            <TextView
+                android:text="Process"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
+        <!--==========================================================-->
+
+        <LinearLayout
+            android:id="@+id/TabBtnActivity"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:descendantFocusability="beforeDescendants"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imgActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:background="@android:color/transparent"
+                android:src="@drawable/icons_activity"/>
+
+            <TextView
+                android:text="Activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+
+        </LinearLayout>
+        <!--==========================================================-->
+
+        <LinearLayout
+            android:id="@+id/TabBtnPlan"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:descendantFocusability="beforeDescendants"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imgPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:src="@drawable/icons_plan"/>
+
+            <TextView
+                android:text="Plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+
+        </LinearLayout>
+        <!--==========================================================-->
+
+        <LinearLayout
+            android:id="@+id/TabBtnProfile"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:descendantFocusability="beforeDescendants"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imgProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:background="@android:color/transparent"
+                android:src="@drawable/icons_profile"/>
+
+            <TextView
+                android:text="Profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+
+        </LinearLayout>
+        <!--==========================================================-->
+
+
+    </LinearLayout>
+</LinearLayout>
