@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/jingyu"
+
     tools:context="com.example.asus.footprint.AdditionalActivity">
 
     <LinearLayout
@@ -14,17 +16,20 @@
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="34dp"
+            android:layout_height="115dp"
             android:layout_weight="1"
-            android:background="@drawable/touxiang" />
+            android:background="@drawable/touxiang"
+            app:srcCompat="@android:drawable/btn_star"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginTop="17dp"
             android:text="Welcome to footprint ,visitor!"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black" />
     </LinearLayout>
 
     <TextView
@@ -45,7 +50,7 @@
         android:layout_height="78dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Height"
+        android:hint="Height"
         android:textColor="@android:color/black"/>
 
     <EditText
@@ -53,7 +58,7 @@
         android:layout_height="74dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Weight"
+        android:hint="Weight"
         android:textColor="@android:color/black"/>
 
     <LinearLayout

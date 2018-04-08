@@ -8,6 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.sql.Time;
+import java.text.SimpleDateFormat;
+
 
 public class ProcessActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -20,7 +25,7 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
     private LinearLayout mTabBtnActivity;
     private LinearLayout mTabBtnPlan;
     private LinearLayout mTabBtnProfile;
-
+    private TextView view_time;
     private FragmentManager fragmentManager;
 
 
@@ -28,12 +33,28 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
+       // monthstats();
+
+
+
         initViews();
         fragmentManager = getFragmentManager();
         setTabSelection(0);
+
+
+
     }
+/*  private void monthstats()
+  {
+      SimpleDateFormat sd=new SimpleDateFormat("yyyy-MM-dd HH:mm E");
 
-
+      String date=sd.format(new java.util.Date());
+String str = "111";
+      ((TextView) findViewById(R.id.textView9)).setText(str);
+      view_time.setText("1111");
+     view_time = (TextView) findViewById(R.id.textView9);
+  }
+*/
     private void initViews()
     {
 
@@ -57,6 +78,7 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.TabBtnActivity:
                 setTabSelection(1);
+
                 break;
             case R.id.TabBtnPlan:
                 setTabSelection(2);
@@ -104,6 +126,7 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
                 ((ImageButton) mTabBtnPlan.findViewById(R.id.imgPlan)).setImageResource(R.drawable.icons_plan_click);
                 if (mPlan == null) {
                     mPlan = new PlanFragment();
+
                     transaction.add(R.id.id_content, mPlan);
                 } else {
                     transaction.show(mPlan);

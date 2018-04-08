@@ -61,23 +61,23 @@ public class ActivityActivity extends AppCompatActivity {
 
 
     //和绷定服务数据交换的桥梁，可以通过IBinder service获取服务的实例来调用服务的方法或者数据
-        private ServiceConnection serviceConnection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder service) {
-                BindService.LcBinder lcBinder = (BindService.LcBinder) service;
-                bindService = lcBinder.getService();
-                bindService.registerCallback(new UpdateUiCallBack() {
-                    @Override
-                    public void updateUi(int stepCount) {
-                        //当前接收到stepCount数据，就是最新的步数
-                        Message message = Message.obtain();
-                        message.what = 1;
-                        message.arg1 = stepCount;
-                        handler.sendMessage(message);
-                        Log.i("MainActivity—updateUi","当前步数"+stepCount);
-                    }
-                });
-            }
+    private ServiceConnection serviceConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            BindService.LcBinder lcBinder = (BindService.LcBinder) service;
+            bindService = lcBinder.getService();
+            bindService.registerCallback(new UpdateUiCallBack() {
+                @Override
+                public void updateUi(int stepCount) {
+                    //当前接收到stepCount数据，就是最新的步数
+                    Message message = Message.obtain();
+                    message.what = 1;
+                    message.arg1 = stepCount;
+                    handler.sendMessage(message);
+                    Log.i("MainActivity—updateUi","当前步数"+stepCount);
+                }
+            });
+        }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {

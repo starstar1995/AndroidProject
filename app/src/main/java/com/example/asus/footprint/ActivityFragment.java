@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 /**
@@ -24,6 +25,11 @@ public class ActivityFragment extends Fragment {
     private BindService bindService;
     private ProcessActivity mProcessActivity;
     private TextView textView;
+    private TextView textView1;
+    private EditText editText;
+    private int value1;
+    private int value2;
+    private int value3;
     private boolean isBind;
     private Handler handler = new Handler() {
         @Override
@@ -41,9 +47,16 @@ public class ActivityFragment extends Fragment {
         View view = inflater.inflate(R.layout.activity_layout, container, false);
         //getActivity().setContentView(R.layout.main_layout);
         textView = view.findViewById(R.id.busu);
+        textView1 = view.findViewById(R.id.textView15);
+        value1 = Integer.parseInt(textView.getText().toString());
         Intent intent = new Intent(getActivity(), BindService.class);
         isBind =  getActivity().bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
         getActivity().startService(intent);
+        View view1 = inflater.inflate(R.layout.profile_layout, container, false);
+        editText = view1.findViewById(R.id.editText9);
+        value2 = Integer.parseInt(editText.getText().toString());
+        value3 = value2 - value1;
+        textView1.setText(value3+" steps to your goal");
         return view;
     }
 

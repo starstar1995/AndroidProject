@@ -19,7 +19,7 @@
         android:layout_height="136dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Email"
+        android:hint="Email"
         tools:layout_editor_absoluteX="52dp"
         tools:layout_editor_absoluteY="62dp"
         android:textColor="@android:color/black"/>
@@ -30,7 +30,7 @@
         android:layout_height="82dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:text="Password"
+        android:hint="Password"
         tools:layout_editor_absoluteX="52dp"
         tools:layout_editor_absoluteY="165dp"
         android:textColor="@android:color/black"/>
