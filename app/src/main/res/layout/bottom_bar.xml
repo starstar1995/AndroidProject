@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="70dp">
+    android:layout_height="70dp"
+    android:background="@drawable/fire_bottom">
 
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#B3E5FC">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/TabBtnProcess"
@@ -29,10 +29,11 @@
                 android:src="@drawable/icons_process"/>
 
             <TextView
-                android:text="Process"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="Process"
+                android:textColor="@android:color/black" />
 
 
         </LinearLayout>
@@ -59,7 +60,8 @@
                 android:text="Activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="@android:color/black"/>
 
         </LinearLayout>
         <!--==========================================================-->
@@ -85,7 +87,8 @@
                 android:text="Plan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="@android:color/black"/>
 
         </LinearLayout>
         <!--==========================================================-->
@@ -111,7 +114,8 @@
                 android:text="Profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="@android:color/black"/>
 
         </LinearLayout>
         <!--==========================================================-->

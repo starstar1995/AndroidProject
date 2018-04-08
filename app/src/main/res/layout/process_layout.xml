@@ -2,28 +2,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fire">
 
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView9"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="23dp"
         android:text="Steps"
+        android:textColor="@android:color/black"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView6"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_marginBottom="38dp"
-        android:layout_marginStart="15dp"
-        android:text="0" />
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignLeft="@+id/textView11"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="35sp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -32,16 +39,24 @@
         android:layout_below="@+id/textView"
         android:layout_marginTop="19dp"
         android:layout_toEndOf="@+id/textView"
-        android:text="Average" />
+        android:layout_toRightOf="@+id/textView"
+        android:text="Average"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignStart="@+id/textView5"
-        android:text="11653" />
+        android:layout_above="@+id/textView6"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginRight="78dp"
+        android:text="11653"
+        android:textColor="@android:color/black"
+        android:textSize="35sp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -50,35 +65,48 @@
         android:layout_alignBaseline="@+id/textView3"
         android:layout_alignBottom="@+id/textView3"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginEnd="113dp"
-        android:text="Best" />
+        android:layout_marginRight="113dp"
+        android:text="Best"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:text="WALING DISTANCE"
-        android:textSize="28sp" />
+        android:text="WALKING DISTANCE"
+        android:textSize="28sp"
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView6"
-        android:layout_marginTop="24dp"
-        android:text="This month" />
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="18dp"
+        android:text="This month"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="18dp"
-        android:text="JANUARY STATS"
+        android:text="APRIL STATS"
+        android:textColor="@android:color/black"
         android:textSize="28sp" />
 
     <TextView
@@ -87,17 +115,22 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView7"
         android:layout_alignBottom="@+id/textView7"
+        android:layout_alignLeft="@+id/textView4"
         android:layout_alignStart="@+id/textView4"
-        android:text="This year" />
+        android:text="This year"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
-        android:layout_alignStart="@+id/textView7"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignRight="@+id/textView3"
         android:layout_below="@+id/textView7"
         android:layout_marginTop="21dp"
         android:text="62.8"
+        android:textColor="@android:color/black"
         android:textSize="35sp" />
 
     <TextView
@@ -107,17 +140,20 @@
         android:layout_alignBaseline="@+id/textView11"
         android:layout_alignBottom="@+id/textView11"
         android:layout_alignStart="@+id/textView10"
+        android:layout_alignLeft="@+id/textView10"
         android:text="62.8"
-        android:textSize="35sp" />
+        android:textSize="35sp"
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView11"
         android:layout_marginTop="17dp"
-        android:text="in kilometers, including all running and hiking activities." />
-
-
+        android:text="in kilometers, including all running and hiking activities."
+        android:textColor="@android:color/black"/>
 </RelativeLayout>
+

@@ -5,36 +5,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/jingyu"
     tools:context="com.example.asus.footprint.MainActivity">
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="259dp"
         app:srcCompat="@drawable/logo" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="79dp"
         android:orientation="vertical"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="106dp"
+        android:layout_height="136dp"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/button"
-            android:layout_width="match_parent"
+
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
             android:onClick="btnContinue"
-            android:text="Continue" />
+            android:paddingLeft="40dp"
+
+            android:paddingRight="40dp"
+            android:text="Continue"
+            android:textColor="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="vertical"></LinearLayout>
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="match_parent"
+
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
             android:onClick="btnSignUp"
-            android:text="Sign up" />
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+
+            android:text="Sign up"
+            android:textColor="@android:color/black"/>
     </LinearLayout>
 </LinearLayout>

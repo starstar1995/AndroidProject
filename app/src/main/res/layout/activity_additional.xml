@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/jingyu"
     tools:context="com.example.asus.footprint.AdditionalActivity">
 
     <LinearLayout
@@ -14,27 +14,30 @@
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            android:background="@drawable/touxiang" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Welcome to footprint ,visitor!" />
+            android:text="Welcome to footprint ,visitor!"
+            android:textColor="@android:color/black"/>
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tell us more about you" />
+        android:text="Tell us more about you"
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="with a bit more info ,we can calculate calories burned more accurateiy " />
+        android:text="with a bit more info ,we can calculate calories burned more accurateiy "
+        android:textColor="@android:color/black"/>
 
     <EditText
         android:id="@+id/editText8"
@@ -42,14 +45,16 @@
         android:layout_height="78dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Height" />
+        android:text="Height"
+        android:textColor="@android:color/black"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="74dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Weight" />
+        android:text="Weight"
+        android:textColor="@android:color/black"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,8 +62,18 @@
         android:orientation="vertical"></LinearLayout>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="@drawable/button_selector"
+        android:gravity="center"
+
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
         android:onClick="btnDone"
-        android:text="Done" />
+        android:text="Done"
+        android:textColor="@android:color/black"/>
 </LinearLayout>
