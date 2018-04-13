@@ -44,11 +44,10 @@
         android:id="@+id/textView25"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText9"
+        android:layout_below="@+id/button5"
+        android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="36dp"
         android:text="Great! This goal is ideal for you."
         android:textColor="@android:color/black"
         android:textSize="18sp" />
@@ -66,15 +65,26 @@
         android:id="@+id/editText9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignLeft="@+id/textView25"
+        android:layout_alignStart="@+id/textView25"
         android:layout_below="@+id/textView23"
         android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="37dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="8000"
         android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText9"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/button_selector"
+        android:text="SAVE" />
 
 </RelativeLayout>
 

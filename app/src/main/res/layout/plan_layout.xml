@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CCFFFF">
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView16"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
@@ -35,7 +32,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="17dp"
                 android:text="Reach your weight goal one step at a time"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"/>
 
             <TextView
                 android:id="@+id/textView18"
@@ -45,7 +42,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="23dp"
                 android:text="WHAT CAN YOU EXPECT?"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"/>
 
             <TextView
                 android:id="@+id/textView19"
@@ -62,45 +59,45 @@
                 android:id="@+id/checkBox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/imageButton"
                 android:layout_alignStart="@+id/imageButton"
+                android:layout_alignLeft="@+id/imageButton"
                 android:layout_below="@+id/textView19"
-                android:layout_marginLeft="26dp"
                 android:layout_marginStart="26dp"
+                android:layout_marginLeft="26dp"
                 android:layout_marginTop="16dp"
                 android:text="Adaptive 12-week plan based on your person..."
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"/>
 
             <CheckBox
                 android:id="@+id/checkBox3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/checkBox2"
                 android:layout_alignStart="@+id/checkBox2"
+                android:layout_alignLeft="@+id/checkBox2"
                 android:layout_below="@+id/checkBox2"
                 android:text="Perfect for beginners: low-impact training"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"/>
 
             <CheckBox
                 android:id="@+id/checkBox4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/checkBox3"
                 android:layout_alignStart="@+id/checkBox3"
+                android:layout_alignLeft="@+id/checkBox3"
                 android:layout_below="@+id/checkBox3"
                 android:layout_marginTop="11dp"
                 android:text="Syncs all other activities tracked with Runtas..."
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"/>
 
             <CheckBox
                 android:id="@+id/checkBox5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/checkBox4"
                 android:layout_alignStart="@+id/checkBox4"
+                android:layout_alignLeft="@+id/checkBox4"
                 android:layout_below="@+id/checkBox4"
                 android:text="Access all features in all Runtastic apps"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"/>
 
         </RelativeLayout>
     </ScrollView>

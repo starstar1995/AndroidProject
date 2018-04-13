@@ -12,22 +12,24 @@ import android.widget.TextView;
 
 import java.sql.Time;
 import java.text.SimpleDateFormat;
-
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 public class ProcessActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private ProcessFragment mProcess;
-    private ActivityFragment mActivity;
-    private PlanFragment mPlan;
-    private ProfileFragment mProfile;
+    private ProcessFragment mProcess ;
+    private ActivityFragment mActivity ;
+    private PlanFragment mPlan ;
+    private ProfileFragment mProfile ;
 
     private LinearLayout mTabBtnProcess;
     private LinearLayout mTabBtnActivity;
     private LinearLayout mTabBtnPlan;
     private LinearLayout mTabBtnProfile;
-    private TextView view_time;
+    private TextView view_average;
+    private TextView view_busu;
     private FragmentManager fragmentManager;
-
+    private OnDataTransmissionListener mListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,9 @@ String str = "111";
         mTabBtnActivity.setOnClickListener(this);
         mTabBtnPlan.setOnClickListener(this);
         mTabBtnProfile.setOnClickListener(this);
+
+        view_average = (TextView)findViewById(R.id.textView2);
+        view_busu = (TextView)findViewById(R.id.busu);
     }
 
     @Override
@@ -78,7 +83,6 @@ String str = "111";
                 break;
             case R.id.TabBtnActivity:
                 setTabSelection(1);
-
                 break;
             case R.id.TabBtnPlan:
                 setTabSelection(2);
@@ -173,6 +177,15 @@ String str = "111";
         {
             transaction.hide(mProfile);
         }
+    }
+
+    //接口回调的方法
+    public interface OnDataTransmissionListener {
+        public void dataTransmission(String data);
+    }
+
+    public void setOnDataTransmissionListener(OnDataTransmissionListener mListener) {
+        this.mListener = mListener;
     }
 
 }
