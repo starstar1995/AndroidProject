@@ -19,7 +19,7 @@ public class DBHelper extends SQLiteOpenHelper {
         //创建表
         String usersInfo_table = "create table usertable" +
                 "(id integer primary key autoincrement, username text," +
-                "password text,allname)";
+                "password text)";
         db.execSQL(usersInfo_table);
 
     }

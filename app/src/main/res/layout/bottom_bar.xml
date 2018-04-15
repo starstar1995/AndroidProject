@@ -11,35 +11,6 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/TabBtnProcess"
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:descendantFocusability="beforeDescendants"
-            android:layout_height="match_parent">
-
-
-            <ImageButton
-                android:id="@+id/imgProcess"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:clickable="false"
-                android:src="@drawable/icons_process"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Process"
-                android:textColor="@android:color/black" />
-
-
-        </LinearLayout>
-        <!--==========================================================-->
-
-        <LinearLayout
             android:id="@+id/TabBtnActivity"
             android:orientation="vertical"
             android:layout_width="0dp"

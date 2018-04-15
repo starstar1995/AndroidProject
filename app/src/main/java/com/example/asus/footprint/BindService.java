@@ -41,7 +41,7 @@ public class BindService extends Service implements SensorEventListener {
     /**
      * 每次第一次启动记步服务时是否从系统中获取了已有的步数记录
      */
-    private boolean hasRecord = true;
+    private boolean hasRecord = false;
     /**
      * 系统中获取到的已有的步数
      */

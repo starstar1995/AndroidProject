@@ -54,6 +54,8 @@ public class StepCount implements StepCountListener {
     public void notifyListener(){
         if(this.stepValuePassListener != null){
             Log.i("countStep","数据更新");
+
+
             this.stepValuePassListener.stepChanged(this.mCount);  //当前步数通过接口传递给调用者
         }
     }

@@ -12,24 +12,23 @@ import android.widget.TextView;
 
 import java.sql.Time;
 import java.text.SimpleDateFormat;
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
+import java.util.Arrays;
+
 
 public class ProcessActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private ProcessFragment mProcess ;
-    private ActivityFragment mActivity ;
-    private PlanFragment mPlan ;
-    private ProfileFragment mProfile ;
+    private ProcessFragment mProcess;
+    private ActivityFragment mActivity;
+    private PlanFragment mPlan;
+    private ProfileFragment mProfile;
 
     private LinearLayout mTabBtnProcess;
     private LinearLayout mTabBtnActivity;
     private LinearLayout mTabBtnPlan;
     private LinearLayout mTabBtnProfile;
-    private TextView view_average;
-    private TextView view_busu;
+    private TextView view_time;
     private FragmentManager fragmentManager;
-    private OnDataTransmissionListener mListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +39,15 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
 
 
         initViews();
+        //time(view_time);
         fragmentManager = getFragmentManager();
-        setTabSelection(0);
+        setTabSelection(1);
 
 
 
     }
+
+
 /*  private void monthstats()
   {
       SimpleDateFormat sd=new SimpleDateFormat("yyyy-MM-dd HH:mm E");
@@ -60,29 +62,27 @@ String str = "111";
     private void initViews()
     {
 
-        mTabBtnProcess = (LinearLayout) findViewById(R.id.TabBtnProcess);
+        //mTabBtnProcess = (LinearLayout) findViewById(R.id.TabBtnProcess);
         mTabBtnActivity = (LinearLayout) findViewById(R.id.TabBtnActivity);
         mTabBtnPlan = (LinearLayout) findViewById(R.id.TabBtnPlan);
         mTabBtnProfile = (LinearLayout) findViewById(R.id.TabBtnProfile);
 
-        mTabBtnProcess.setOnClickListener(this);
+        //mTabBtnProcess.setOnClickListener(this);
         mTabBtnActivity.setOnClickListener(this);
         mTabBtnPlan.setOnClickListener(this);
         mTabBtnProfile.setOnClickListener(this);
-
-        view_average = (TextView)findViewById(R.id.textView2);
-        view_busu = (TextView)findViewById(R.id.busu);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId())
         {
-            case R.id.TabBtnProcess:
-                setTabSelection(0);
-                break;
+            //case R.id.TabBtnProcess:
+                //setTabSelection(0);
+                //break;
             case R.id.TabBtnActivity:
                 setTabSelection(1);
+
                 break;
             case R.id.TabBtnPlan:
                 setTabSelection(2);
@@ -105,7 +105,7 @@ String str = "111";
         // 先隐藏掉所有的Fragment，以防止有多个Fragment显示在界面上的情况
         hideFragments(transaction);
         switch (index) {
-            case 0:
+            /*case 0:
                 // 当点击了消息tab时，改变控件的图片和文字颜色
                 ((ImageButton) mTabBtnProcess.findViewById(R.id.imgProcess)).setImageResource(R.drawable.icons_process_click);
                 if (mProcess == null) {
@@ -116,7 +116,7 @@ String str = "111";
                     // 如果MessageFragment不为空，则直接将它显示出来
                     transaction.show(mProcess);
                 }
-                break;
+                break;*/
             case 1:
                 ((ImageButton) mTabBtnActivity.findViewById(R.id.imgActivity)).setImageResource(R.drawable.icons_activity_click);
                 if (mActivity == null) {
@@ -149,8 +149,8 @@ String str = "111";
     }
     private void resetBtn()
     {
-        ((ImageButton) mTabBtnProcess.findViewById(R.id.imgProcess))
-                .setImageResource(R.drawable.icons_process);
+        //((ImageButton) mTabBtnProcess.findViewById(R.id.imgProcess))
+          //      .setImageResource(R.drawable.icons_process);
         ((ImageButton) mTabBtnActivity.findViewById(R.id.imgActivity))
                 .setImageResource(R.drawable.icons_activity);
         ((ImageButton) mTabBtnPlan.findViewById(R.id.imgPlan))
@@ -161,10 +161,10 @@ String str = "111";
 
     private void hideFragments(FragmentTransaction transaction)
     {
-        if (mProcess != null)
+        /*if (mProcess != null)
         {
             transaction.hide(mProcess);
-        }
+        }*/
         if (mActivity != null)
         {
             transaction.hide(mActivity);
@@ -177,15 +177,6 @@ String str = "111";
         {
             transaction.hide(mProfile);
         }
-    }
-
-    //接口回调的方法
-    public interface OnDataTransmissionListener {
-        public void dataTransmission(String data);
-    }
-
-    public void setOnDataTransmissionListener(OnDataTransmissionListener mListener) {
-        this.mListener = mListener;
     }
 
 }

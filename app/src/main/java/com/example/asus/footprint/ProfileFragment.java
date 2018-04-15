@@ -3,8 +3,8 @@ package com.example.asus.footprint;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,11 +18,17 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.text.SimpleDateFormat;
+
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 /**
  * Created by ASUS on 2018/4/3.
@@ -31,17 +37,18 @@ import org.greenrobot.eventbus.Subscribe;
 public class ProfileFragment extends Fragment {
 
     private EditText edittext;
-    private TextView textview;
-    private TextView textview1;
+    private TextView textview, textView21;
+    private TextView textview1, textview_name;
     private Button btn;
-
-    private OnDataTransmissionListener mListener;
+    private TextView text_name, text_condition;
+    private String name;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         View view =  inflater.inflate(R.layout.profile_layout, container, false);
         edittext = view.findViewById(R.id.editText9);
-        edittext.setText(read("goal.txt"));
+        textView21 = view.findViewById(R.id.textView21);
+
         btn = view.findViewById(R.id.button5);
 
         View view1 =  inflater.inflate(R.layout.activity_layout, container, false);
@@ -49,6 +56,13 @@ public class ProfileFragment extends Fragment {
         textview1 = view1.findViewById(R.id.textView15);
 
         btn.setOnClickListener(new MyOnClickListener());
+
+
+        textView21.setText( read("name.txt"));
+
+
+        //init();
+
         return view;
     }
 
@@ -60,9 +74,8 @@ public class ProfileFragment extends Fragment {
             //获取editText控件的数据
             String my_string = edittext.getText().toString();
             write(my_string,"goal.txt");
-            int stepToGoal = Integer.parseInt(my_string) - Integer.parseInt(textview.getText().toString());
-            String str1 = stepToGoal+" steps to your goal";
-            //EventBus.getDefault().post(str1);
+            //int stepToGoal = Integer.parseInt(my_string) - Integer.parseInt(textview.getText().toString());
+            //textview1.setText(stepToGoal+" steps to your goal");
             Toast.makeText(getActivity(), "数据为:"+my_string+"，已保存", Toast.LENGTH_SHORT).show();
 
         }
@@ -99,9 +112,9 @@ public class ProfileFragment extends Fragment {
         }
     }
 
+
     public String read(String str) {
         BufferedReader bufferedReader = null;
-        TextView view = null;
         StringBuilder sb = new StringBuilder();
         try {
             // 指定要读取的文件
@@ -131,13 +144,13 @@ public class ProfileFragment extends Fragment {
         return null;
     }
 
-    //接口回调的方法
-    public interface OnDataTransmissionListener {
-        public void dataTransmission(String data);
-    }
 
-    public void setOnDataTransmissionListener(OnDataTransmissionListener mListener) {
-        this.mListener = mListener;
-    }
+
+
+
+
+    // text_condition = (TextView) findViewById(R.id.text_condition);
+        // text_condition.setText("在线");
+
 
 }

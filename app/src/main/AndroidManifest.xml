@@ -45,6 +45,7 @@
             android:name=".BindService"
             android:enabled="true"
             android:exported="true" />
+
     </application>
 
 </manifest>

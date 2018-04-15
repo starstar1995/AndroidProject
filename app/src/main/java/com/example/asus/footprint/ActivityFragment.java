@@ -18,8 +18,6 @@ import android.view.animation.Animation;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
@@ -64,7 +62,6 @@ public class ActivityFragment extends Fragment {
             }
         }
     };
-    private OnDataTransmissionListener mListener;
 
     @Nullable
     @Override
@@ -137,7 +134,7 @@ public class ActivityFragment extends Fragment {
     public void onDestroy() {  //app被关闭之前，service先解除绑定
         super.onDestroy();
         //EventBus.getDefault().post(textView.getText().toString());
-        EventBus.getDefault().unregister(this);
+      //  EventBus.getDefault().unregister(this);
         if (isBind) {
             getActivity().unbindService(serviceConnection);
         }
@@ -205,21 +202,5 @@ public class ActivityFragment extends Fragment {
         return null;
     }
 
-    @Subscribe
-    public void onEvent(String data) {
-        textView1.setText(data);
-    }
-    public void setData(String string) {
-        textView1.setText(string);
-    }
-
-    //接口回调的方法
-    public interface OnDataTransmissionListener {
-        public void dataTransmission(String data);
-    }
-
-    public void setOnDataTransmissionListener(OnDataTransmissionListener mListener) {
-        this.mListener = mListener;
-    }
 }
 
