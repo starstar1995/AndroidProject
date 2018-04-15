@@ -6,4 +6,4 @@
 
 2.
 
-![Image text]( AndroidProject/imgfolder/2.png )
+![Image text]( https://raw.githubusercontent.com/starstar1995/AndroidProject/master/imgfolder/2.png )
